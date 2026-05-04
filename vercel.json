@@ -8,7 +8,9 @@
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
-  "env": {
-    "VITE_API_URL": "https://unibeez-e5d7.onrender.com"
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://unibeez-e5d7.onrender.com"
+    }
   }
 }
