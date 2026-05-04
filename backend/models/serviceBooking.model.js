@@ -88,9 +88,6 @@ serviceBookingSchema.index({ provider: 1, status: 1 });
 serviceBookingSchema.index({ buyer: 1 });
 serviceBookingSchema.index({ service: 1 });
 serviceBookingSchema.index({ bookingDate: 1 });
-serviceBookingSchema.index(
-  { service: 1, buyer: 1, bookingDate: 1 },
-  { unique: true }
-);
+serviceBookingSchema.index({ service: 1, buyer: 1, bookingDate: 1 });
 
 export default mongoose.model("ServiceBooking", serviceBookingSchema);

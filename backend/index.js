@@ -206,21 +206,24 @@ const ensureServiceBookingIndexes = async () => {
       }
     }
 
-    const legacyUniqueIndex = indexes.find((index) => {
+    const obsoleteUniqueIndexes = indexes.filter((index) => {
       const keys = Object.keys(index.key || {});
-      return (
-        index.unique === true &&
+      const isServiceBuyerIndex =
         keys.length === 2 &&
         index.key.service === 1 &&
-        index.key.buyer === 1
-      );
+        index.key.buyer === 1;
+      const isServiceBuyerDateIndex =
+        keys.length === 3 &&
+        index.key.service === 1 &&
+        index.key.buyer === 1 &&
+        index.key.bookingDate === 1;
+
+      return index.unique === true && (isServiceBuyerIndex || isServiceBuyerDateIndex);
     });
 
-    if (legacyUniqueIndex) {
-      await ServiceBooking.collection.dropIndex(legacyUniqueIndex.name);
-      console.log(
-        "Dropped legacy service booking index; bookings are now unique per date."
-      );
+    for (const index of obsoleteUniqueIndexes) {
+      await ServiceBooking.collection.dropIndex(index.name);
+      console.log(`Dropped obsolete unique service booking index: ${index.name}`);
     }
 
     await ServiceBooking.createIndexes();

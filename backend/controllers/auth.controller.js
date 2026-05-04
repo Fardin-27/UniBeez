@@ -1,3 +1,4 @@
+// Module: Authentication & User Management – developed by Member 1
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
