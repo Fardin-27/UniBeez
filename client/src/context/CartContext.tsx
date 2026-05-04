@@ -1,3 +1,4 @@
+// Product & Transaction module
 import React, { createContext, useContext, useState, useCallback } from "react";
 import { useAuth } from "./AuthContext";
 import type { CartItem } from "../types";

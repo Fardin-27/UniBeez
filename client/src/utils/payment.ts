@@ -1,3 +1,4 @@
+// Product & Transaction module
 export type PaymentInitResponse = {
   paymentUrl: string;
   orderId: string;
