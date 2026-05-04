@@ -1,3 +1,4 @@
+// Module 1: Product & Transaction Management – developed by Member 2
 import Product from "../models/product.model.js";
 import ActivityLog from "../models/activityLog.model.js";
 
