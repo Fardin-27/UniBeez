@@ -1,3 +1,4 @@
+// Module 2: Skill-Based Service & Booking — developed by Member 3
 import TimeSlot from "../models/timeSlot.model.js";
 import Service from "../models/service.model.js";
 import ActivityLog from "../models/activityLog.model.js";
