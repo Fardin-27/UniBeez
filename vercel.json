@@ -9,6 +9,6 @@
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "env": {
-    "VITE_API_URL": "https://unisphere.onrender.com"
+    "VITE_API_URL": "https://unibeez-e5d7.onrender.com"
   }
 }
