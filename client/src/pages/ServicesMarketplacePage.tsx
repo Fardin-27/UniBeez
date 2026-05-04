@@ -1,3 +1,4 @@
+// Module 2: Skill-Based Service & Booking — developed by Member 3
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Service } from "../types";

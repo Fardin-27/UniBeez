@@ -1,3 +1,4 @@
+// Module 2: Skill-Based Service & Booking — developed by Member 3
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";

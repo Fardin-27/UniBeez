@@ -1,3 +1,4 @@
+// Module 2: Skill-Based Service & Booking — developed by Member 3
 import mongoose from "mongoose";
 
 const serviceSchema = new mongoose.Schema(
