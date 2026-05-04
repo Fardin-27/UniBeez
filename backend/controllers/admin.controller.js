@@ -1,3 +1,4 @@
+// Admin & Feedback module
 // Module 3: Admin Panel & Feedback System — developed by Member 4
 import User from "../models/user.model.js";
 import Product from "../models/product.model.js";

@@ -1,3 +1,4 @@
+// Admin & Feedback module
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from "react";
 import { useAuth } from "./AuthContext";
 import type { Notification } from "../types";

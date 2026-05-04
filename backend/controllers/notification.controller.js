@@ -1,3 +1,4 @@
+// Admin & Feedback module
 import Notification from "../models/notification.model.js";
 
 // GET /api/notifications
