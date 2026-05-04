@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f7fbfa;
+  font-family: 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #9cd8cf;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #63bdb0;
+}
+
+/* Glass card utility */
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/60 shadow-card;
+  }
+}
+
+/* Animated gradient mesh background */
+.bg-mesh {
+  position: relative;
+  background: linear-gradient(135deg, #f7fbfa 0%, #eefaf6 45%, #fff7ef 100%);
+}
+.bg-mesh::before,
+.bg-mesh::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+  animation: meshFloat 20s ease-in-out infinite alternate;
+}
+.bg-mesh::before {
+  width: 600px;
+  height: 600px;
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(24,179,162,0.2) 0%, rgba(24,179,162,0) 70%);
+}
+.bg-mesh::after {
+  width: 500px;
+  height: 500px;
+  bottom: -80px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(255,140,92,0.16) 0%, rgba(255,140,92,0) 70%);
+  animation-delay: -10s;
+}
+
+@keyframes meshFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(40px, 30px) scale(1.08); }
+  100% { transform: translate(-20px, -15px) scale(0.95); }
+}
+
+.highlight-available {
+  background-color: #d4edda !important; /* Light green */
+  border-radius: 50%;
+  color: #155724; /* Dark green text */
+  font-weight: bold;
+}
