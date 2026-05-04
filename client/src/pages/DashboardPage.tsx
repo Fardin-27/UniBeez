@@ -1,3 +1,4 @@
+// Module: Authentication & User Management – developed by Member 1
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";

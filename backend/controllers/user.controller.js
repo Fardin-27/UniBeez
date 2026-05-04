@@ -1,3 +1,4 @@
+// Module: Authentication & User Management – developed by Member 1
 import User from "../models/user.model.js";
 import ActivityLog from "../models/activityLog.model.js";
 

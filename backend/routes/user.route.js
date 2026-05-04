@@ -1,3 +1,4 @@
+// Module: Authentication & User Management – developed by Member 1
 import { Router } from "express";
 import {
   getAllUsers,
